@@ -1,5 +1,6 @@
 /*
 
+
 Theme Name: Wp Theme
 Theme URI: https://wordpress.org/themes/wpadvanced/
 Author: the Wordpress Team
@@ -13,8 +14,17 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, custom-colors, custom-menu,custom-logo
 
+<<<<<<< HEAD
 */
 
 h1{
     color:red;
+=======
+
+*/
+
+
+h1{ 
+    color: red;
+>>>>>>> f192583e8a501f0b921f4c3d56519f761239253c
 }
