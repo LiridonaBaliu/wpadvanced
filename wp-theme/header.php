@@ -13,7 +13,16 @@
 
 
 </head>
-<body>
+<?php
+if(is_front_page()) {
+    $ds = array('ds-theme','my-class');
+}else {
+    $ds = array('no-ds-theme');
+}
+?>
+<body <?php body_class($ds)?>>
+
+
     <?php
     wp_nav_menu(array(
         'theme_location'=>'primary'
