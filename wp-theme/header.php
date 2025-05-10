@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
-<<<<<<< HEAD
-    wp_head();
-=======
      wp_head();
->>>>>>> f192583e8a501f0b921f4c3d56519f761239253c
+
 
     ?>
+
+    <?php
+  if(is_front_page()) {
+    $ds = array('ds-theme', 'my-class');
+  }else {
+    $ds = array('no-ds-theme');
+  }
+    ?>
 </head>
-<body>
+<body <?php body_class($ds); ?>>
     <?php
     wp_nav_menu(array(
         'theme_location'=>'primary'
