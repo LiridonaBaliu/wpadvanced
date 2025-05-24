@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 /* Template Name: About-me Template*/
 get_header(); ?>
@@ -12,7 +12,7 @@ get_header(); ?>
 <?php endif; ?>
 
 <?php get_footer(); ?>
-=======
+
 
 <?php 
 /* Template Name: About-me Template*/
@@ -28,4 +28,4 @@ get_header(); ?>
    <?php endwhile; ?>
    <?php endif; ?>
 <?php  get_footer(); ?>
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
+>

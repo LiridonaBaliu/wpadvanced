@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php get_header(); ?>
 
 <?php if (have_posts()) : ?>
@@ -11,7 +10,7 @@
 <?php endif; ?>
 
 <?php get_footer(); ?>
-=======
+
 
 <?php  get_header(); ?>
 
@@ -26,4 +25,3 @@
    <?php endwhile; ?>
    <?php endif; ?>
 <?php  get_footer(); ?>
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d

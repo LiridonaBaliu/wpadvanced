@@ -1,6 +1,4 @@
 /*
-
-<<<<<<< HEAD
 Theme Name: Wp Theme
 Theme URI: https://wordpress.org/themes/wpadvanced
 Author: the Wordpress Team
@@ -8,8 +6,6 @@ Author URI: https://wordpress.org
 Description: Wp Theme is designed to be flexible and applicable to any website.
 Requires at least: 6.4
 Test up to: 6.7
-=======
-
 Theme Name: Wp Theme
 Theme URI: https://wordpress.org/themes/wpadvanced/
 Author: the Wordpress Team
@@ -17,30 +13,148 @@ Author URI: https://wordpress.org
 Description: Wp Theme is desgined to be flexible and applicable to any website.
 Requires at least: 6.4
 Teste up to: 6.7
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
 Requires PHP: 7.0
 Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-<<<<<<< HEAD
 Tags: one-column, costum-colors, costum-menu, costum-logo
 
 
-=======
-Tags: one-column, custom-colors, custom-menu,custom-logo
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
 
 
 */
-
-<<<<<<< HEAD
-h1{
-    color:red;
-=======
-
-
-h1{ 
-    color: red;
-
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
+.menu-area {
+	background: var( --wpdevs-gray2 );
 }
+.main-menu {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+}
+.main-menu ul {
+    margin: 0;
+    padding-left: 0;
+}
+.main-menu ul li {
+    display: inline-block;
+    line-height: 55px;
+    position: relative;
+}
+.main-menu ul li.current_page_item > a{
+    font-weight: bold;
+}
+.main-menu ul li a {
+    color: #000000;
+    padding: 0 30px;
+    text-decoration: none;
+    display: block;
+}
+.main-menu ul li a:hover,
+.main-menu ul li a:active
+{
+    color: var( --wpdevs-gray1 );
+    transition: .5s all;
+}
+.main-menu ul li a:focus + ul
+{
+    display: block;
+}
+.main-menu li.menu-item-has-children::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc( 50% - 6px);
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #000000;
+    border-left: 6px solid transparent;
+}
+.main-menu ul.sub-menu {
+    position: absolute;
+    padding-left: 0;
+    background-color: #000000;
+    z-index: 1;
+    text-align: left;
+    display: none;
+}
+.main-menu ul .menu-item-has-children:hover>ul,
+.main-menu ul .menu-item-has-children:focus+ul {
+    display: block
+}
+.main-menu ul.sub-menu li {
+    width: max-content;
+}
+.main-menu ul.sub-menu a {
+    color: #FFFFFF;
+}
+.menu-icon,
+.check-button {
+	cursor: pointer;
+	display: none;
+}
+.menu-icon .bar1, 
+.menu-icon .bar2, 
+.menu-icon .bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+@media (max-width: 767px){
+    .menu-icon,
+    .check-button {
+		display: block;
+	}
+    .check-button{
+        border: none;
+        background: transparent;
+        height: 55px;
+    }
+	.main-menu ul{
+		position: absolute;
+		width: 100%;
+		background: #000000;
+		left: -999px;
+		text-align: left;
+		transition: all cubic-bezier(.79,.14,.15,.86) .5s;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+	}
+    .main-menu ul:not(.sub-menu){
+        margin-top: 55px;
+    }
+	.main-menu ul li{
+		display: block;
+		margin: 15px 0;
+		line-height: 30px;
+	}
+	.main-menu ul li a {
+		color: #FFFFFF;
+	}
+    .main-menu ul.sub-menu{
+        position: relative;
+        top: 0;
+        margin-left: 30px;
+        display: block;
+        width: auto;
+    }
+    .main-menu ul.sub-menu a{
+        color: var( --wpdevs-gray1 );
+    } 
+    .show-dropdown{
+        left: 0 !important;
+    }  
+    .animate-button .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+        transform: rotate(-45deg) translate(-4px, 4px);
+    }
+    .animate-button .bar2 {opacity: 0;}
+    .animate-button .bar3 {
+        -webkit-transform: rotate(45deg) translate(-7px, -7px);
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+}  

@@ -1,10 +1,15 @@
-<?php
-<<<<<<< HEAD
+<footer class="site-footer">
 
-=======
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
-wp_footer();
+<div class="contaier">
+    <nav class="footer-menu">
+          <?php wp_nav_menu(array('theme_location'=> 'wp_devs_main_menu', 'depth'=> 1)); ?>
+    </nav>
+</div>
 
-?>
+</footer>
+
+
+
+<?php wp_footer();?>
 </body>
 </html>
