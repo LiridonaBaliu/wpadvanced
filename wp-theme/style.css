@@ -1,6 +1,5 @@
 /*
 
-<<<<<<< HEAD
 Theme Name: Wp theme
 Theme Uri: https//wordpess.org/themes/wpadvanced/
 Author: the wordpess Team
@@ -12,33 +11,39 @@ Requires PHP:7.0
 Version: 1.3
 Tags: one-column, custom-colors, custom-logo +
 
-=======
-
-Theme Name: Wp Theme
-Theme URI: https://wordpress.org/themes/wpadvanced/
-Author: the Wordpress Team
-Author URI: https://wordpress.org
-Description: Wp Theme is desgined to be flexible and applicable to any website.
-Requires at least: 6.4
-Teste up to: 6.7
-Requires PHP: 7.0
-Version: 1.3
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, custom-colors, custom-menu,custom-logo
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
 
 
 */
 
-<<<<<<< HEAD
-h1{
-    color:rgb(10, 158, 226)
-=======
-
-
-h1{ 
-    color: red;
-
->>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
+.menu-area {
+	background: var( --wpdevs-gray2 );
+}
+.main-menu {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+}
+.main-menu ul {
+    margin: 0;
+    padding-left: 0;
+}
+.main-menu ul li {
+    display: inline-block;
+    line-height: 55px;
+    position: relative;
+}
+.main-menu ul li.current_page_item > a{
+    font-weight: bold;
+}
+.main-menu ul li a {
+    color: #000000;
+    padding: 0 30px;
+    text-decoration: none;
+    display: block;
+}
+.main-menu ul li a:hover,
+.main-menu ul li a:active
+{
+    color: var( --wpdevs-gray1 );
+    transition: .5s all;
 }
