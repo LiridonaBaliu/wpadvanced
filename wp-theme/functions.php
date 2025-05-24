@@ -3,8 +3,8 @@ function load_scripts(){
     wp_enqueue_style('wp_style',get_template_directory_uri()."/style.css",false,'1.1','all');
      wp_enqueue_style('bootsrap_style',get_template_directory_uri()."/css/bootstrap.min.css",false,'1.1','all');
 
-    wp_enqueue_script('wp_style',get_template_directory_uri()."/js/script.js",false,'1.1','true');
-    wp_enqueue_script('bootstrap_js',get_template_directory_uri()."/js/bootstrap.bundle.min.js",false,'1.1','true');
+    wp_enqueue_script('wp_script',get_template_directory_uri()."/js/script.js",false,'1.1',true);
+    wp_enqueue_script('bootstrap_js',get_template_directory_uri()."/js/bootstrap.bundle.min.js",false,'1.1',true);
 }
 add_action('wp_enqueue_scripts','load_scripts');
 
@@ -37,8 +37,55 @@ function config() {
    add_theme_support('title-tag');
 
 }
-
-
 add_action('after_setup_theme', 'config',0);
+
+function wpdevs_sidebars() {
+  register_sidebar(
+     array(
+       'name' => 'Blog Sidebar',
+       'id' => 'sidebar-blog',
+       'description' => 'This is the Blog Sidebar.You can add your widgets here.',
+       'before_widget' => '<div class="wiget-wrapper">',
+       'after_widget' => '</div>',
+       'before_title' => '<h4 class="widget-title">',
+       'after_title' => '</h4>'
+     )
+  );
+
+   register_sidebar(
+     array(
+       'name' => 'Service 1',
+       'id' => 'services-1',
+       'description' => 'First service area',
+       'before_widget' => '<div class="wiget-wrapper">',
+       'after_widget' => '</div>',
+       'before_title' => '<h4 class="widget-title">',
+       'after_title' => '</h4>'
+     )
+  );
+   register_sidebar(
+     array(
+       'name' => 'Service 2',
+       'id' => 'services-2',
+       'description' => 'Second service area',
+       'before_widget' => '<div class="wiget-wrapper">',
+       'after_widget' => '</div>',
+       'before_title' => '<h4 class="widget-title">',
+       'after_title' => '</h4>'
+     )
+  );
+     register_sidebar(
+     array(
+       'name' => 'Service 2',
+       'id' => 'services-3',
+       'description' => 'Third service area',
+       'before_widget' => '<div class="wiget-wrapper">',
+       'after_widget' => '</div>',
+       'before_title' => '<h4 class="widget-title">',
+       'after_title' => '</h4>'
+     )
+  );
+}
+add_action('widgets_init','wpdevs_sidebars');
 
 ?>
