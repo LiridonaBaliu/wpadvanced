@@ -1,5 +1,6 @@
 /*
 
+<<<<<<< HEAD
 Theme Name: Wp Theme
 Theme URI: https://wordpress.org/themes/wpadvanced
 Author: the Wordpress Team
@@ -7,17 +8,39 @@ Author URI: https://wordpress.org
 Description: Wp Theme is designed to be flexible and applicable to any website.
 Requires at least: 6.4
 Test up to: 6.7
+=======
+
+Theme Name: Wp Theme
+Theme URI: https://wordpress.org/themes/wpadvanced/
+Author: the Wordpress Team
+Author URI: https://wordpress.org
+Description: Wp Theme is desgined to be flexible and applicable to any website.
+Requires at least: 6.4
+Teste up to: 6.7
+>>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
 Requires PHP: 7.0
 Version: 1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+<<<<<<< HEAD
 Tags: one-column, costum-colors, costum-menu, costum-logo
 
 
+=======
+Tags: one-column, custom-colors, custom-menu,custom-logo
+>>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
 
 
 */
 
+<<<<<<< HEAD
 h1{
     color:red;
+=======
+
+
+h1{ 
+    color: red;
+
+>>>>>>> 0828cdc4437de734a4f1bfb68b27cce5418f500d
 }
