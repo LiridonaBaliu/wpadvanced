@@ -1,15 +1,54 @@
 
 <?php  get_header(); ?>
 
+<div id="content" class="site-content">
+   <div id="primary" class="content-area">
+      <main id="main" class="site-main">
+        <h1>Blog</h1>
+        <div class="container">
+         <div class="blog-items">
+
+         <?php  
+         
+         if(have_posts()):
+            while(have_posts()): the_post();
+            get template_part('parts/content');
+         endwhile;
+         
+         ?>
+
+        <div class="vpdevs-pagination">
+         <div class="pages new">
+          
+         <?php previous_posts_link("<<Newer posts"); ?>
+
+         </div>
+
+         <div class="pages old">
+          
+         <?php previous_posts_link("<<Older posts"); ?>
+         
+         </div>
+        </div>
+
+         <?php
+         else:
+            ?>
+            <p>Nothing yet to be displayed!</p>
+            <?php endif; ?>
+         </div>
+         <?php get_sidebar(); ?>
+
+        </div>
+
+      </main>
+
+</div>
+
+</div>
 
 
-   <?php
-   if(have_posts()):
-   while(have_posts()): the_post(); ?>
-   <h1><?php the_title(); ?></h1>
-    <small>posted on: <?php the_time('F j,Y') ?> at <?php the_time('g:i a')?> in <?php the_category(); ?></small>
-   <p><?php the_content(); ?></p>
-   <?php endwhile; ?>
-   <?php endif; ?>
+
+
 
 <?php  get_footer(); ?>
